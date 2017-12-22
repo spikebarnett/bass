@@ -44,7 +44,7 @@ function check_allow
     if [[ "$DENY" -ge "1" ]]
     then
       log "WARN" "($IPADDR) IP denied by server configuration: $1"
-      echo -ne "HTTP/1.1 403 Forbidden\r\nContent-type: text/html\r\n\r\n403 - Forbidden</br>Go fuck yourself!\r\n\r\n"
+      echo -ne "HTTP/1.1 403 Forbidden\r\nContent-type: text/html\r\n\r\n403 - Forbidden</br>Go fuck yourself\!\r\n\r\n"
       exit
     else
       log "DBUG" "($IPADDR) IP not allowed or denied by server configuration: $1"
